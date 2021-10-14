@@ -14,10 +14,9 @@ public class MainMenu : MonoBehaviour {
     public GameObject mMenu;
     public GameObject cLength;
     public GameObject cWeight;
-    // public GameObject cTemp;
+    public GameObject cTemp;
     public GameObject cTime;
-    // public GameObject cVolume;
-    // public GameObject cArea;
+    public GameObject cArea;
 
     // Start is called before the first frame update
     void Start () {
@@ -42,55 +41,64 @@ public class MainMenu : MonoBehaviour {
             cLength.SetActive (true);
             mMenu.SetActive (false);
             cWeight.SetActive (false);
-            // cTemp.SetActive (false);
-            // cTime.SetActive (false);
-            // cArea.SetActive (false);
+            cTemp.SetActive (false);
+            cTime.SetActive (false);
+            cArea.SetActive (false);
         }
         if (convertWeight) {
             cLength.SetActive (false);
             mMenu.SetActive (false);
             cWeight.SetActive (true);
-            // cTemp.SetActive (false);
-            // cTime.SetActive (false);
-            // cArea.SetActive (false);
+            cTemp.SetActive (false);
+            cTime.SetActive (false);
+            cArea.SetActive (false);
         }
         if (mainMenu) {
             cLength.SetActive (false);
             mMenu.SetActive (true);
             cWeight.SetActive (false);
-            // cTemp.SetActive (false);
-            // cTime.SetActive (false);
-            // cArea.SetActive (false);
+            cTemp.SetActive (false);
+            cTime.SetActive (false);
+            cArea.SetActive (false);
         }
-        // if (convertTemp) {
-        //     cLength.SetActive (false);
-        //     mMenu.SetActive (false);
-        //     cWeight.SetActive (false) ;
-        //     cTemp.SetActive (true) ;
-        //     cTime.SetActive (false) ;
-        //     cArea.SetActive (false) ;
-        // }
+        if (convertTemp) {
+            cLength.SetActive (false);
+            mMenu.SetActive (false);
+            cWeight.SetActive (false);
+            cTemp.SetActive (true);
+            cTime.SetActive (false);
+            cArea.SetActive (false);
+        }
         if (convertTime) {
             cLength.SetActive (false);
             mMenu.SetActive (false);
             cWeight.SetActive (false);
-            // cTemp.SetActive (false) ;
+            cTemp.SetActive (false);
             cTime.SetActive (true);
-            // cArea.SetActive (false) ;
+            cArea.SetActive (false);
         }
-        // if (convertArea) {
-        //     cLength.SetActive (false);
-        //     mMenu.SetActive (false) ;
-        //     cWeight.SetActive (false) ;
-        //     cTemp.SetActive (false) ;
-        //     cTime.SetActive (false) ;
-        //     cArea.SetActive (true) ;
-        // }
+        if (convertArea) {
+            cLength.SetActive (false);
+            mMenu.SetActive (false);
+            cWeight.SetActive (false);
+            cTemp.SetActive (false);
+            cTime.SetActive (false);
+            cArea.SetActive (true);
+        }
 
     }
 
     public void quitApp () {
         Application.Quit ();
+    }
+
+    public void returnButton () {
+        mainMenu = true;
+        convertLength = false;
+        convertWeight = false;
+        convertTemp = false;
+        convertTime = false;
+        convertArea = false;
     }
 
     public void changeMenu () {
@@ -125,14 +133,6 @@ public class MainMenu : MonoBehaviour {
                 convertWeight = false;
                 convertTemp = false;
                 convertTime = true;
-                convertArea = false;
-                return;
-            case 5: //Volume
-                mainMenu = false;
-                convertLength = false;
-                convertWeight = false;
-                convertTemp = false;
-                convertTime = false;
                 convertArea = false;
                 return;
             case 6:
