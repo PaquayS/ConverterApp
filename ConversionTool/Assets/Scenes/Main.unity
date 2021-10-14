@@ -8066,7 +8066,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 999573722}
-  - component: {fileID: 999573724}
   - component: {fileID: 999573723}
   m_Layer: 0
   m_Name: AreaConverter
@@ -8111,22 +8110,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e8b22b842eb4f8e4facc5888ab301546, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  unitGiven: {fileID: 0}
-  unitWanted: {fileID: 0}
-  valueGiven: {fileID: 0}
-  valueWanted: {fileID: 0}
---- !u!114 &999573724
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 999573721}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 012ceeead360c2447ad166f629d5304c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   unitGiven: {fileID: 137095754}
@@ -10539,25 +10522,11 @@ MonoBehaviour:
       m_Image: {fileID: 0}
     - m_Text: Time
       m_Image: {fileID: 0}
-    - m_Text: Volume
-      m_Image: {fileID: 0}
     - m_Text: Area
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 499771403}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 1
+      m_Calls: []
   m_AlphaFadeSpeed: 0.15
 --- !u!114 &1268056389
 MonoBehaviour:

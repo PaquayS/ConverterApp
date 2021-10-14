@@ -135,7 +135,7 @@ public class MainMenu : MonoBehaviour {
                 convertTime = true;
                 convertArea = false;
                 return;
-            case 6:
+            case 5: //Area
                 mainMenu = false;
                 convertLength = false;
                 convertWeight = false;
